@@ -56,13 +56,13 @@ void displayTime() {
   String tempS;
   String AMPM;
 
-//  if (DST) {
-//    hours++;
-//
-//    if (hours > 24) {
-//      hours = hours - 24;
-//    }
-//  }
+  if (DST) {
+    hours++;
+
+    if (hours > 24) {
+      hours = hours - 24;
+    }
+  }
 
   if (hours == 0) {
     hours = 12;

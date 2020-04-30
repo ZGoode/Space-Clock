@@ -2,7 +2,7 @@
 #include <DS3231.h>
 #include <Wire.h>
 
-const int switchDST = 11;
+const int switchDST = A1;
 
 boolean DST;
 
@@ -57,7 +57,7 @@ void displayTime() {
   String AMPM;
 
   if (DST) {
-    hours++;
+    hours--;
 
     if (hours > 24) {
       hours = hours - 24;
